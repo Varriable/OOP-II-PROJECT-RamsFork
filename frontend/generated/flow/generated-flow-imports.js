@@ -1,5 +1,6 @@
-import '@vaadin/common-frontend/ConnectionIndicator.js';
 import '@vaadin/polymer-legacy-adapter/style-modules.js';
+import '@vaadin/login/src/vaadin-login-overlay.js';
+import '@vaadin/common-frontend/ConnectionIndicator.js';
 import '@vaadin/accordion/src/vaadin-accordion.js';
 import '@vaadin/details/src/vaadin-details.js';
 import '@vaadin/accordion/src/vaadin-accordion-panel.js';
@@ -42,7 +43,6 @@ import '@vaadin/icons/vaadin-iconset.js';
 import '@vaadin/list-box/src/vaadin-list-box.js';
 import '@vaadin/item/src/vaadin-item.js';
 import '@vaadin/login/src/vaadin-login-form.js';
-import '@vaadin/login/src/vaadin-login-overlay.js';
 import 'Frontend/generated/jar-resources/menubarConnector.js';
 import '@vaadin/menu-bar/src/vaadin-menu-bar.js';
 import '@vaadin/message-input/src/vaadin-message-input.js';

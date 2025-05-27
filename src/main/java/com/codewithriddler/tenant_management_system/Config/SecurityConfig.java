@@ -52,20 +52,22 @@ public class SecurityConfig {
                 .csrf().disable()
                 .authorizeHttpRequests(authz -> authz
                         .requestMatchers(
-                                "/api/auth/**",    // login, register, etc.
-                                "/login", "/register",  // in case you serve HTML pages directly
-                                "/",               // root path
-                                "/index.html",     // frontend HTML
-                                "/css/**", "/js/**", "/images/**" // static resources
+                                "/", "/login", "/register",
+                                "/index.html", "/css/**", "/js/**", "/images/**"
                         ).permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                        .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
+                )
+                .logout(logout -> logout
+                        .logoutSuccessUrl("/")
+                        .permitAll()
                 );
 
         return http.build();
     }
+
 
 
 }
